@@ -1,0 +1,3 @@
+[submodule "OnlineJudgeHelper"]
+	path = OnlineJudgeHelper
+	url = https://github.com/nodchip/OnlineJudgeHelper.git

@@ -1,0 +1,13 @@
+
+// a^k
+ll fpow(ll a, ll k, int M) {
+    ll res = 1ll;
+    ll x = a;
+    while (k != 0) {
+        if ((k & 1) == 1)
+            res = (res * x) % M;
+        x = (x * x) % M;
+        k >>= 1;
+    }
+    return res;
+}

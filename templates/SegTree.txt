@@ -1,0 +1,41 @@
+
+class SegTree {
+    int n;
+    vi dat;
+
+public:
+    SegTree(int _n) {
+        n = 1;
+        while(n < _n) n *= 2;
+        dat.resize(2*n-1);
+        fill(all(dat), INT_MAX);
+    }
+
+    void update(int k, int a) {
+        k += n - 1;
+        dat[k] = a;
+        while(k > 0) {
+            k = (k-1) / 2;
+            dat[k] = min(dat[k*2+1], dat[k*2+2]);
+        }
+    }
+
+    int _query(int a, int b, int k, int l, int r) {
+        if(r <= a || b <= l) return INT_MAX;
+
+        if(a <= l && r <= b) return dat[k];
+        else {
+            int vl = _query(a, b, k*2+1, l, (l+r)/2);
+            int vr = _query(a, b, k*2+2, (l+r)/2, r);
+            return min(vl, vr);
+        }
+    }
+    // [a, b)
+    int query(int a, int b) {
+        return _query(a, b, 0, 0, n);
+    }
+    // a
+    ll query(int a) {
+        return query(a, a+1);
+    }
+};

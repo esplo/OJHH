@@ -1,0 +1,25 @@
+
+bool work(const vector< vi >& ed, const int node, vi& order, vi& color) {
+    color[node] = 1;
+    for(auto e : ed[node]) {
+        if(color[e] == 2)
+            continue;
+        if(color[e] == 1)
+            return false;
+        if(!work(ed, e, order, color))
+            return false;
+    }
+    order.push_back(node);
+    color[node] = 2;
+    return true;
+}
+
+bool topologicalSort(const vector< vi >& ed, const vi& nodes, vi& order) {
+    vi color(ed.size(), 0);
+    rep(i, nodes.size()) {
+        if(color[nodes[i]] == 0 && !work(ed, nodes[i], order, color))
+            return false;
+    }
+    reverse(all(order));
+    return true;
+}
