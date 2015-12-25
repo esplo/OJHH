@@ -36,6 +36,9 @@ const double EPS = 1e-10;
 double zero(double d) {
     return d < EPS ? 0.0 : d;
 }
+template<class T>bool chmax(T &a, const T &b) { if (a<b) { a=b; return true; } return false; }
+template<class T>bool chmin(T &a, const T &b) { if (b<a) { a=b; return true; } return false; }
+#define UNIQUE(v) v.erase( unique(v.begin(), v.end()), v.end() );
 
 template<typename T1, typename T2>
 ostream &operator<<(ostream &os, const pair<T1, T2> &p) {
@@ -69,12 +72,17 @@ ll fpow(ll a, ll k, int M) {
     return res;
 }
 
+struct prepare {
+	prepare() {
+	    cout.setf(ios::fixed, ios::floatfield);
+	    cout.precision(8);
+	    ios_base::sync_with_stdio(false);
+	}
+} _prepare;
+
 int main() {
-    cout.setf(ios::fixed, ios::floatfield);
-    cout.precision(8);
-    ios_base::sync_with_stdio(false);
-
-
-
+	
+	
+	
     return 0;
 }
