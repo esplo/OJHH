@@ -1,0 +1,26 @@
+struct edge{
+    int to, cost;
+};
+
+vi dijkstra(int start, int goal, int N, vector< vector<edge> > &graphs) {
+    priority_queue<pii, vector<pii>, greater<pii> > que;
+    vi d(N, INF);
+    d[start] = 0;
+    que.push(mp(0, start));
+
+    while(!que.empty()){
+        pii p = que.top(); que.pop();
+        int v = p.second;
+        if(d[v] < p.first)
+            continue;
+
+        tr(it, graphs[v]) {
+            if(d[it->to] > d[v] + it->cost) {
+                d[it->to] = d[v] + it->cost;
+                que.push(mp(d[it->to], it->to));
+            }
+        }
+    }
+
+    return d;
+}

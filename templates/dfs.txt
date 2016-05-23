@@ -1,0 +1,21 @@
+
+int dx[] = {1, 0, -1, 0};
+int dy[] = {0, 1, 0, -1};
+
+int H, W;
+
+ll dfs(int y, int x) {
+    if(dp[y][x] != 0)
+        return dp[y][x];
+
+    rep(i, 4) {
+        int ny = y + dy[i];
+        int nx = x + dx[i];
+
+        if(0 <= ny && ny < H && 0 <= nx && nx < W) {
+            // something
+        }
+    }
+
+    return (dp[y][x] = next);
+}

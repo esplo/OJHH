@@ -1,0 +1,48 @@
+// ref: http://snuke.hatenablog.com/
+
+// 各iについて「文字列S[0,i-1]の接頭辞と接尾辞が最大何文字一致しているか」を記録した配列R
+// http://snuke.hatenablog.com/entry/2014/12/01/235807
+void KMP(const string& S, vector<int>& R) {
+    R.resize( S.size()+1 );
+    
+    R[0] = -1;
+    int j = -1;
+    for (int i = 0; i < S.size(); i++) {
+        while (j >= 0 && S[i] != S[j]) j = R[j];
+        j++;
+        R[i+1] = j;
+    }
+}
+
+// 各iについて「文字iを中心とする最長の回文の半径」を記録した配列 R
+// 半径 = (全長+1)/2
+// http://snuke.hatenablog.com/entry/2014/12/02/235837
+void Manachar(const string& S, vector<int>& R) {
+    R.resize( S.size() );
+    
+    int i = 0, j = 0;
+    while (i < S.size()) {
+        while(i-j >= 0 && i+j < S.size() && S[i-j] == S[i+j]) ++j;
+        R[i] = j;
+        int k = 1;
+        while(i-k >= 0 && i+k < S.size() && k+R[i-k] < j) R[i+k] = R[i-k], ++k;
+        i += k; j -= k;
+    }
+}
+
+// 各iについて「S と S[i:|S|-1] の最長共通接頭辞の長さ」を記録した配列 A
+// http://snuke.hatenablog.com/entry/2014/12/03/214243
+void ZAlgorithm(const string& S, vector<int>& A) {
+    A.resize( S.size() );
+
+    A[0] = S.size();
+    int i = 1, j = 0;
+    while (i < S.size()) {
+        while (i+j < S.size() && S[j] == S[i+j]) ++j;
+        A[i] = j;
+        if (j == 0) { ++i; continue;}
+        int k = 1;
+        while (i+k < S.size() && k+A[k] < j) A[i+k] = A[k], ++k;
+        i += k; j -= k;
+    }
+}
