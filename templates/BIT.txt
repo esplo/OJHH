@@ -22,4 +22,17 @@ struct BIT {
             i += i & -i;
         }
     }
+
+    void range_add(BIT& bit1, int l, int r, int x) {
+        add(l, -x * (l-1));
+        bit1.add(l, x);
+        add(r, x*r);
+        bit1.add(r, -x);
+    }
+
+    int range_sum(BIT& bit1, int l, int r) {
+        int res = sum(r) + bit1.sum(r) * r;
+        res -= sum(l-1) + bit1.sum(l-1) * (l-1);
+        return res;
+    }
 };
