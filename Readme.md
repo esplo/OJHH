@@ -26,7 +26,7 @@ c-xx.shにIDを与えて実行します。
 
 ```bash
 $ ./c-cf.sh 599
-$ cd 599
+$ cd prob/599
 $ # coding C now...
 $ ./r.sh C
 $ # coding D now...
