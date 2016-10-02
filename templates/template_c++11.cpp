@@ -1,4 +1,56 @@
-#include <bits/stdc++.h>
+#include <cctype>
+#include <cerrno>
+#include <cfloat>
+#include <ciso646>
+#include <climits>
+#include <clocale>
+#include <cmath>
+#include <csetjmp>
+#include <csignal>
+#include <cstdarg>
+#include <cstddef>
+#include <cstdio>
+#include <cstdlib>
+#include <cstring>
+#include <ctime>
+
+// C++
+#include <algorithm>
+#include <bitset>
+#include <complex>
+#include <deque>
+#include <exception>
+#include <fstream>
+#include <functional>
+#include <iomanip>
+#include <ios>
+#include <iosfwd>
+#include <iostream>
+#include <istream>
+#include <iterator>
+#include <limits>
+#include <list>
+#include <locale>
+#include <map>
+#include <memory>
+#include <new>
+#include <numeric>
+#include <ostream>
+#include <queue>
+#include <set>
+#include <sstream>
+#include <stack>
+#include <stdexcept>
+#include <streambuf>
+#include <string>
+#include <typeinfo>
+#include <utility>
+#include <valarray>
+#include <vector>
+
+#include <unordered_set>
+#include <unordered_map>
+
 using namespace std;
 
 #define all(c) ((c).begin()), ((c).end())
@@ -30,7 +82,7 @@ typedef vector<string> vs;
 typedef pair<int, int> pii;
 typedef pair<ll, ll> pll;
 
-const int INF = 1 << 29;
+const int INF = 1 << 30;
 const double EPS = 1e-10;
 
 double zero(double d) {

@@ -1,0 +1,54 @@
+class BipartiteGraph {
+    int V;
+    vvi G;
+    vi match;
+    vector<bool> used;
+
+public:
+    BipartiteGraph(int n) {
+        V = n;
+        clear();
+
+        G.resize(V);
+        match.resize(V);
+        used.resize(V);
+    }
+
+    void clear() {
+        G.clear();
+        match.clear();
+        used.clear();
+    }
+
+    void add_edge(int u, int v) {
+        G[u].push_back(v);
+        G[v].push_back(u);
+    }
+
+    bool dfs(int v) {
+        used[v] = true;
+        tr(it, G[v]) {
+            int u = *it;
+            int w = match[u];
+            if (w < 0 || (!used[w] && dfs(w))) {
+                match[v] = u;
+                match[u] = v;
+                return true;
+            }
+        }
+        return false;
+    }
+
+    int bipartite_matching() {
+        int res = 0;
+        fill(all(match), -1);
+        rep(v, V) {
+            if (match[v] < 0) {
+                fill(all(used), false);
+                if (dfs(v))
+                    res++;
+            }
+        }
+        return res;
+    }
+};

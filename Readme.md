@@ -1,28 +1,28 @@
-# ƒIƒ“ƒ‰ƒCƒ“ƒWƒƒƒbƒW•â•ƒXƒNƒŠƒvƒg•â•ƒXƒNƒŠƒvƒgŒQ
+# ã‚ªãƒ³ãƒ©ã‚¤ãƒ³ã‚¸ãƒ£ãƒƒã‚¸è£œåŠ©ã‚¹ã‚¯ãƒªãƒ—ãƒˆè£œåŠ©ã‚¹ã‚¯ãƒªãƒ—ãƒˆç¾¤
 
-## ŠT—v
-nodchip‚³‚ñì‚Ì[OnlineJudgeHelper](https://github.com/nodchip/OnlineJudgeHelper)‚ð—˜—p‚·‚éŠÂ‹«‚ð®‚¦‚éƒXƒNƒŠƒvƒgŒQ‚Å‚·B
-–â‘èIDAƒRƒ“ƒeƒXƒgID‚È‚Ç‚ðˆø”‚É—^‚¦‚é‚ÆAƒtƒHƒ‹ƒ_‚ðì‚Á‚Äƒeƒ“ƒvƒŒ[ƒg‚ðƒRƒs[‚µ‚Ä‚­‚ê‚Ü‚·B
-‚»‚ê‚¾‚¯‚Å‚·B
+## æ¦‚è¦
+nodchipã•ã‚“ä½œã®[OnlineJudgeHelper](https://github.com/nodchip/OnlineJudgeHelper)ã‚’åˆ©ç”¨ã™ã‚‹ç’°å¢ƒã‚’æ•´ãˆã‚‹ã‚¹ã‚¯ãƒªãƒ—ãƒˆç¾¤ã§ã™ã€‚
+å•é¡ŒIDã€ã‚³ãƒ³ãƒ†ã‚¹ãƒˆIDãªã©ã‚’å¼•æ•°ã«ä¸Žãˆã‚‹ã¨ã€ãƒ•ã‚©ãƒ«ãƒ€ã‚’ä½œã£ã¦ãƒ†ãƒ³ãƒ—ãƒ¬ãƒ¼ãƒˆã‚’ã‚³ãƒ”ãƒ¼ã—ã¦ãã‚Œã¾ã™ã€‚
+ãã‚Œã ã‘ã§ã™ã€‚
 
-Šî–{“I‚ÉŒÂl—p‚Å‚·B
+åŸºæœ¬çš„ã«å€‹äººç”¨ã§ã™ã€‚
 
-## Žg‚¢•û
+## ä½¿ã„æ–¹
 
-### ƒCƒ“ƒXƒg[ƒ‹
+### ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«
 ```bash
 $ git clone https://github.com/esplo/OJHH.git OJHH
 $ cd OJHH
 $ git submodule update --init
 ```
 
-‚»‚ÌŒãAOnlineJudgeHelper“à‚ÉAsetting.json‚ð”z’u‚µ‚Ü‚·B
+ãã®å¾Œã€OnlineJudgeHelperå†…ã«ã€setting.jsonã‚’é…ç½®ã—ã¾ã™ã€‚
 
-### ƒWƒƒƒbƒW
-c-xx.sh‚ÉID‚ð—^‚¦‚ÄŽÀs‚µ‚Ü‚·B
-¶¬‚³‚ê‚½ƒtƒHƒ‹ƒ_‚Éö‚èAr-xx.sh‚É–â‘èID‚ð—^‚¦‚Ü‚·B
+### ã‚¸ãƒ£ãƒƒã‚¸
+c-xx.shã«IDã‚’ä¸Žãˆã¦å®Ÿè¡Œã—ã¾ã™ã€‚
+ç”Ÿæˆã•ã‚ŒãŸãƒ•ã‚©ãƒ«ãƒ€ã«æ½œã‚Šã€r-xx.shã«å•é¡ŒIDã‚’ä¸Žãˆã¾ã™ã€‚
 
-—á‚¦‚ÎACodeforces‚Ì599iCodeforces Round 332B599‚ÍURL‚ðŽQÆ)‚ÌC, D–â‘è‚ð‰ð‚­ê‡AˆÈ‰º‚ÌƒRƒ}ƒ“ƒh‚ðŽÀs‚µ‚Ü‚·B
+ä¾‹ãˆã°ã€Codeforcesã®599ï¼ˆCodeforces Round 332ã€‚599ã¯URLã‚’å‚ç…§)ã®C, Då•é¡Œã‚’è§£ãå ´åˆã€ä»¥ä¸‹ã®ã‚³ãƒžãƒ³ãƒ‰ã‚’å®Ÿè¡Œã—ã¾ã™ã€‚
 
 ```bash
 $ ./c-cf.sh 599
@@ -33,5 +33,5 @@ $ # coding D now...
 $ ./r.sh D
 ```
 
-### IDE‚ðŽg‚¤
-CLion‚È‚Ç‚ÌIDE‚ðŽg‚¤ê‡‚ÍAì¬‚³‚ê‚½ƒfƒBƒŒƒNƒgƒŠ“à‚ÉV‹KƒvƒƒWƒFƒNƒg‚ðì‚Á‚Ä‚­‚¾‚³‚¢B
+### IDEã‚’ä½¿ã†
+CLionãªã©ã®IDEã‚’ä½¿ã†å ´åˆã¯ã€ä½œæˆã•ã‚ŒãŸãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒªå†…ã«æ–°è¦ãƒ—ãƒ­ã‚¸ã‚§ã‚¯ãƒˆã‚’ä½œã£ã¦ãã ã•ã„ã€‚

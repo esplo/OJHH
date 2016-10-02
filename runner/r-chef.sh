@@ -2,5 +2,6 @@
 
 set -e
 
+CON=`echo ${PWD##*/}`
 OJDIR="../../OnlineJudgeHelper"
-${OJDIR}/oj.py --setting-file-path=${OJDIR}/setting.json --codechef ${1} ${2} --testcase-directory=testcase${2} ${3}
+${OJDIR}/oj.py --setting-file-path=${OJDIR}/setting.json --codechef ${CON} ${1} --testcase-directory=testcase${1} ${2}

@@ -5,5 +5,7 @@ set -eu
 DIR="prob/yuki"
 mkdir -p ${DIR}
 
-rsync -Aa runner/r-yuki.sh ${DIR}/r.sh
-rsync -Aa templates/template_c++11.cpp ${DIR}/${1}.cpp
+rsync -a runner/r-yuki.sh ${DIR}/r.sh
+chmod 755 ${DIR}/r.sh
+rsync -a templates/template_c++11.cpp ${DIR}/${1}.cpp
+

@@ -1,6 +1,6 @@
 // ref: http://snuke.hatenablog.com/
 
-// Šei‚É‚Â‚¢‚Äu•¶š—ñS[0,i-1]‚ÌÚ“ª«‚ÆÚ”ö«‚ªÅ‘å‰½•¶šˆê’v‚µ‚Ä‚¢‚é‚©v‚ğ‹L˜^‚µ‚½”z—ñR
+// å„iã«ã¤ã„ã¦ã€Œæ–‡å­—åˆ—S[0,i-1]ã®æ¥é ­è¾ã¨æ¥å°¾è¾ãŒæœ€å¤§ä½•æ–‡å­—ä¸€è‡´ã—ã¦ã„ã‚‹ã‹ã€ã‚’è¨˜éŒ²ã—ãŸé…åˆ—R
 // http://snuke.hatenablog.com/entry/2014/12/01/235807
 void KMP(const string& S, vector<int>& R) {
     R.resize( S.size()+1 );
@@ -14,8 +14,8 @@ void KMP(const string& S, vector<int>& R) {
     }
 }
 
-// Šei‚É‚Â‚¢‚Äu•¶ši‚ğ’†S‚Æ‚·‚éÅ’·‚Ì‰ñ•¶‚Ì”¼Œav‚ğ‹L˜^‚µ‚½”z—ñ R
-// ”¼Œa = (‘S’·+1)/2
+// å„iã«ã¤ã„ã¦ã€Œæ–‡å­—iã‚’ä¸­å¿ƒã¨ã™ã‚‹æœ€é•·ã®å›æ–‡ã®åŠå¾„ã€ã‚’è¨˜éŒ²ã—ãŸé…åˆ— R
+// åŠå¾„ = (å…¨é•·+1)/2
 // http://snuke.hatenablog.com/entry/2014/12/02/235837
 void Manachar(const string& S, vector<int>& R) {
     R.resize( S.size() );
@@ -30,7 +30,7 @@ void Manachar(const string& S, vector<int>& R) {
     }
 }
 
-// Šei‚É‚Â‚¢‚ÄuS ‚Æ S[i:|S|-1] ‚ÌÅ’·‹¤’ÊÚ“ª«‚Ì’·‚³v‚ğ‹L˜^‚µ‚½”z—ñ A
+// å„iã«ã¤ã„ã¦ã€ŒS ã¨ S[i:|S|-1] ã®æœ€é•·å…±é€šæ¥é ­è¾ã®é•·ã•ã€ã‚’è¨˜éŒ²ã—ãŸé…åˆ— A
 // http://snuke.hatenablog.com/entry/2014/12/03/214243
 void ZAlgorithm(const string& S, vector<int>& A) {
     A.resize( S.size() );

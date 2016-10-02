@@ -79,7 +79,7 @@ typedef vector<string> vs;
 typedef pair<int, int> pii;
 typedef pair<ll, ll> pll;
 
-const int INF = 1 << 29;
+const int INF = 1 << 30;
 const double EPS = 1e-10;
 
 double zero(double d) {

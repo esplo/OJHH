@@ -2,9 +2,9 @@ struct edge{
     int to, cost;
 };
 
-vi dijkstra(int start, int goal, int N, vector< vector<edge> > &graphs) {
+vi dijkstra(int start, vector< vector<edge> >& graphs) {
     priority_queue<pii, vector<pii>, greater<pii> > que;
-    vi d(N, INF);
+    vi d(graphs.size(), INF);
     d[start] = 0;
     que.push(mp(0, start));
 
